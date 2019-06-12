@@ -12,7 +12,8 @@ namespace MassReconApi.Core.Services.Mappers
                 Id = report.Id,
                 SearchPhrase = report.SearchPhrase,
                 Notes = report.Notes,
-                Status = report.Status
+                Status = report.Status,
+                Quantity = report.Quantity
             };
         }
 
@@ -23,7 +24,8 @@ namespace MassReconApi.Core.Services.Mappers
                 Id = reportDto.Id.GetValueOrDefault(),
                 SearchPhrase = reportDto.SearchPhrase,
                 Notes = reportDto.Notes,
-                Status = reportDto.Status
+                Status = reportDto.Status,
+                Quantity = reportDto.Quantity
             };
         }
     }

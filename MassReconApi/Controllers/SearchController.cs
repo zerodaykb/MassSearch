@@ -17,7 +17,7 @@ namespace MassReconApi.Controllers
         } 
         
         [HttpGet()]
-        public async Task<IActionResult> GetByPhrase([FromQuery(Name = "phrase")] string phrase)
+        public async Task<IActionResult> GetByPhrase([FromQuery(Name = "query")] string phrase)
         {
             var results = await _iResponseService.GetByPhrase(phrase);
             

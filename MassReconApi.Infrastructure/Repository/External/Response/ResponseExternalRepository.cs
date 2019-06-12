@@ -20,8 +20,9 @@ namespace MassReconApi.Infrastucture.Repository
             var apiKey = Environment.GetEnvironmentVariable("API_KEY");
             
             var resultJson = await GetStringAsync(apiUrl + "?key=" + apiKey +"&query=" + phrase);
+            var result = JsonConvert.DeserializeObject<Response>(resultJson);
             
-            return JsonConvert.DeserializeObject<Response>(resultJson);
+            return result;
         }
         
         private static async Task<string> GetStringAsync(string url)

@@ -8,6 +8,7 @@ namespace MassReconApi.Contract.Dto
         public string SearchPhrase { get; set; }
         public string Notes { get; set; }
         public string Status { get; set; }
+        public int Quantity { get; set; }
 
         private List<ReportItemDto> ReportItems { get; set; }
     }

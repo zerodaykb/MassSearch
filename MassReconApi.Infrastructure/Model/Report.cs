@@ -40,7 +40,7 @@ namespace MassReconApi.Infrastucture.Model
         public IEnumerable<ReportItem> ReportItems { get; set; }
         public string Notes { get; set; }
         public string Status { get; set; }
-        public int NumberOfItems { get; set; }
+        public int Quantity { get; set; }
         
     }
 }

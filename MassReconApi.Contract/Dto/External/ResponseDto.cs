@@ -4,11 +4,11 @@ namespace MassReconApi.Contract.Dto
 {
     public class ResponseDto
     {
-        public string SearchPhrase { get; set; }
+        public string Query { get; set; }
         
-        public int NumberOfItems { get; set; }
+        public int Quantity { get; set; }
         
-        public List<ResponseItemDto> ResponseItems { get; set; }
+        public List<ResponseItemDto> Items { get; set; }
         
     }
 }
