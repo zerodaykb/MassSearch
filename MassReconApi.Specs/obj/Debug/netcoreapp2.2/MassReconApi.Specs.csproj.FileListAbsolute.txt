@@ -1,0 +1,14 @@
+/Users/kkb/moje/studia/dotNet/projekt/MassReconApi/MassReconApi.Specs/bin/Debug/netcoreapp2.2/xunit.runner.visualstudio.dotnetcore.testadapter.dll
+/Users/kkb/moje/studia/dotNet/projekt/MassReconApi/MassReconApi.Specs/bin/Debug/netcoreapp2.2/xunit.runner.reporters.netcoreapp10.dll
+/Users/kkb/moje/studia/dotNet/projekt/MassReconApi/MassReconApi.Specs/bin/Debug/netcoreapp2.2/xunit.runner.utility.netcoreapp10.dll
+/Users/kkb/moje/studia/dotNet/projekt/MassReconApi/MassReconApi.Specs/bin/Debug/netcoreapp2.2/MassReconApi.Specs.deps.json
+/Users/kkb/moje/studia/dotNet/projekt/MassReconApi/MassReconApi.Specs/bin/Debug/netcoreapp2.2/MassReconApi.Specs.runtimeconfig.json
+/Users/kkb/moje/studia/dotNet/projekt/MassReconApi/MassReconApi.Specs/bin/Debug/netcoreapp2.2/MassReconApi.Specs.runtimeconfig.dev.json
+/Users/kkb/moje/studia/dotNet/projekt/MassReconApi/MassReconApi.Specs/bin/Debug/netcoreapp2.2/MassReconApi.Specs.dll
+/Users/kkb/moje/studia/dotNet/projekt/MassReconApi/MassReconApi.Specs/bin/Debug/netcoreapp2.2/MassReconApi.Specs.pdb
+/Users/kkb/moje/studia/dotNet/projekt/MassReconApi/MassReconApi.Specs/obj/Debug/netcoreapp2.2/MassReconApi.Specs.csprojAssemblyReference.cache
+/Users/kkb/moje/studia/dotNet/projekt/MassReconApi/MassReconApi.Specs/obj/Debug/netcoreapp2.2/MassReconApi.Specs.csproj.CoreCompileInputs.cache
+/Users/kkb/moje/studia/dotNet/projekt/MassReconApi/MassReconApi.Specs/obj/Debug/netcoreapp2.2/MassReconApi.Specs.AssemblyInfoInputs.cache
+/Users/kkb/moje/studia/dotNet/projekt/MassReconApi/MassReconApi.Specs/obj/Debug/netcoreapp2.2/MassReconApi.Specs.AssemblyInfo.cs
+/Users/kkb/moje/studia/dotNet/projekt/MassReconApi/MassReconApi.Specs/obj/Debug/netcoreapp2.2/MassReconApi.Specs.dll
+/Users/kkb/moje/studia/dotNet/projekt/MassReconApi/MassReconApi.Specs/obj/Debug/netcoreapp2.2/MassReconApi.Specs.pdb

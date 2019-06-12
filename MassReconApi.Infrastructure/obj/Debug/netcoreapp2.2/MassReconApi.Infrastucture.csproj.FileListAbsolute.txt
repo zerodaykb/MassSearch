@@ -1,0 +1,14 @@
+/Users/kkb/moje/studia/dotNet/projekt/MassReconApi/MassReconApi.Infrastucture/bin/Debug/netcoreapp2.2/MassReconApi.Infrastucture.deps.json
+/Users/kkb/moje/studia/dotNet/projekt/MassReconApi/MassReconApi.Infrastucture/bin/Debug/netcoreapp2.2/MassReconApi.Infrastucture.runtimeconfig.json
+/Users/kkb/moje/studia/dotNet/projekt/MassReconApi/MassReconApi.Infrastucture/bin/Debug/netcoreapp2.2/MassReconApi.Infrastucture.runtimeconfig.dev.json
+/Users/kkb/moje/studia/dotNet/projekt/MassReconApi/MassReconApi.Infrastucture/bin/Debug/netcoreapp2.2/MassReconApi.Infrastucture.dll
+/Users/kkb/moje/studia/dotNet/projekt/MassReconApi/MassReconApi.Infrastucture/bin/Debug/netcoreapp2.2/MassReconApi.Infrastucture.pdb
+/Users/kkb/moje/studia/dotNet/projekt/MassReconApi/MassReconApi.Infrastucture/obj/Debug/netcoreapp2.2/MassReconApi.Infrastucture.csprojAssemblyReference.cache
+/Users/kkb/moje/studia/dotNet/projekt/MassReconApi/MassReconApi.Infrastucture/obj/Debug/netcoreapp2.2/MassReconApi.Infrastucture.csproj.CoreCompileInputs.cache
+/Users/kkb/moje/studia/dotNet/projekt/MassReconApi/MassReconApi.Infrastucture/obj/Debug/netcoreapp2.2/MassReconApi.Infrastucture.RazorAssemblyInfo.cache
+/Users/kkb/moje/studia/dotNet/projekt/MassReconApi/MassReconApi.Infrastucture/obj/Debug/netcoreapp2.2/MassReconApi.Infrastucture.RazorAssemblyInfo.cs
+/Users/kkb/moje/studia/dotNet/projekt/MassReconApi/MassReconApi.Infrastucture/obj/Debug/netcoreapp2.2/MassReconApi.Infrastucture.AssemblyInfoInputs.cache
+/Users/kkb/moje/studia/dotNet/projekt/MassReconApi/MassReconApi.Infrastucture/obj/Debug/netcoreapp2.2/MassReconApi.Infrastucture.AssemblyInfo.cs
+/Users/kkb/moje/studia/dotNet/projekt/MassReconApi/MassReconApi.Infrastucture/obj/Debug/netcoreapp2.2/MassReconApi.Infrastucture.RazorTargetAssemblyInfo.cache
+/Users/kkb/moje/studia/dotNet/projekt/MassReconApi/MassReconApi.Infrastucture/obj/Debug/netcoreapp2.2/MassReconApi.Infrastucture.dll
+/Users/kkb/moje/studia/dotNet/projekt/MassReconApi/MassReconApi.Infrastucture/obj/Debug/netcoreapp2.2/MassReconApi.Infrastucture.pdb

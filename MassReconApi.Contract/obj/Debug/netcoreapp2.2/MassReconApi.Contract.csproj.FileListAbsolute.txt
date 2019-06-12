@@ -1,0 +1,14 @@
+/Users/kkb/moje/studia/dotNet/projekt/MassReconApi/MassReconApi.Contract/bin/Debug/netcoreapp2.2/MassReconApi.Contract.deps.json
+/Users/kkb/moje/studia/dotNet/projekt/MassReconApi/MassReconApi.Contract/bin/Debug/netcoreapp2.2/MassReconApi.Contract.runtimeconfig.json
+/Users/kkb/moje/studia/dotNet/projekt/MassReconApi/MassReconApi.Contract/bin/Debug/netcoreapp2.2/MassReconApi.Contract.runtimeconfig.dev.json
+/Users/kkb/moje/studia/dotNet/projekt/MassReconApi/MassReconApi.Contract/bin/Debug/netcoreapp2.2/MassReconApi.Contract.dll
+/Users/kkb/moje/studia/dotNet/projekt/MassReconApi/MassReconApi.Contract/bin/Debug/netcoreapp2.2/MassReconApi.Contract.pdb
+/Users/kkb/moje/studia/dotNet/projekt/MassReconApi/MassReconApi.Contract/obj/Debug/netcoreapp2.2/MassReconApi.Contract.csprojAssemblyReference.cache
+/Users/kkb/moje/studia/dotNet/projekt/MassReconApi/MassReconApi.Contract/obj/Debug/netcoreapp2.2/MassReconApi.Contract.csproj.CoreCompileInputs.cache
+/Users/kkb/moje/studia/dotNet/projekt/MassReconApi/MassReconApi.Contract/obj/Debug/netcoreapp2.2/MassReconApi.Contract.RazorAssemblyInfo.cache
+/Users/kkb/moje/studia/dotNet/projekt/MassReconApi/MassReconApi.Contract/obj/Debug/netcoreapp2.2/MassReconApi.Contract.RazorAssemblyInfo.cs
+/Users/kkb/moje/studia/dotNet/projekt/MassReconApi/MassReconApi.Contract/obj/Debug/netcoreapp2.2/MassReconApi.Contract.AssemblyInfoInputs.cache
+/Users/kkb/moje/studia/dotNet/projekt/MassReconApi/MassReconApi.Contract/obj/Debug/netcoreapp2.2/MassReconApi.Contract.AssemblyInfo.cs
+/Users/kkb/moje/studia/dotNet/projekt/MassReconApi/MassReconApi.Contract/obj/Debug/netcoreapp2.2/MassReconApi.Contract.RazorTargetAssemblyInfo.cache
+/Users/kkb/moje/studia/dotNet/projekt/MassReconApi/MassReconApi.Contract/obj/Debug/netcoreapp2.2/MassReconApi.Contract.dll
+/Users/kkb/moje/studia/dotNet/projekt/MassReconApi/MassReconApi.Contract/obj/Debug/netcoreapp2.2/MassReconApi.Contract.pdb

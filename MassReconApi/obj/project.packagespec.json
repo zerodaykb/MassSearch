@@ -1,0 +1,65 @@
+﻿{
+  "version": "1.0.0",
+  "restore": {
+    "projectUniqueName": "/Users/kkb/moje/studia/dotNet/projekt/MassReconApi/MassReconApi/MassReconApi.csproj",
+    "projectName": "MassReconApi",
+    "projectPath": "/Users/kkb/moje/studia/dotNet/projekt/MassReconApi/MassReconApi/MassReconApi.csproj",
+    "outputPath": "/Users/kkb/moje/studia/dotNet/projekt/MassReconApi/MassReconApi/obj/",
+    "projectStyle": "PackageReference",
+    "fallbackFolders": [
+      "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"
+    ],
+    "originalTargetFrameworks": [
+      "netcoreapp2.2"
+    ],
+    "frameworks": {
+      "netcoreapp2.2": {
+        "projectReferences": {
+          "/Users/kkb/moje/studia/dotNet/projekt/MassReconApi/MassReconApi.Core/MassReconApi.Core.csproj": {
+            "projectPath": "/Users/kkb/moje/studia/dotNet/projekt/MassReconApi/MassReconApi.Core/MassReconApi.Core.csproj"
+          },
+          "/Users/kkb/moje/studia/dotNet/projekt/MassReconApi/MassReconApi.Infrastructure/MassReconApi.Infrastructure.csproj": {
+            "projectPath": "/Users/kkb/moje/studia/dotNet/projekt/MassReconApi/MassReconApi.Infrastructure/MassReconApi.Infrastructure.csproj"
+          }
+        }
+      }
+    },
+    "warningProperties": {
+      "warnAsError": [
+        "NU1605"
+      ]
+    }
+  },
+  "frameworks": {
+    "netcoreapp2.2": {
+      "dependencies": {
+        "Microsoft.AspNetCore.App": {
+          "suppressParent": "All",
+          "target": "Package",
+          "version": "[2.2.0, )",
+          "autoReferenced": true
+        },
+        "Microsoft.AspNetCore.Razor.Design": {
+          "suppressParent": "All",
+          "target": "Package",
+          "version": "[2.2.0, )"
+        },
+        "Microsoft.EntityFrameworkCore": {
+          "target": "Package",
+          "version": "[2.2.2, )"
+        },
+        "Microsoft.NETCore.App": {
+          "suppressParent": "All",
+          "target": "Package",
+          "version": "[2.2.0, )",
+          "autoReferenced": true
+        }
+      },
+      "imports": [
+        "net461"
+      ],
+      "assetTargetFallback": true,
+      "warn": true
+    }
+  }
+}

@@ -1,0 +1,61 @@
+﻿{
+  "version": "1.0.0",
+  "restore": {
+    "projectUniqueName": "/Users/kkb/moje/studia/dotNet/projekt/MassReconApi/MassReconApi.Core/MassReconApi.Core.csproj",
+    "projectName": "MassReconApi.Core",
+    "projectPath": "/Users/kkb/moje/studia/dotNet/projekt/MassReconApi/MassReconApi.Core/MassReconApi.Core.csproj",
+    "outputPath": "/Users/kkb/moje/studia/dotNet/projekt/MassReconApi/MassReconApi.Core/obj/",
+    "projectStyle": "PackageReference",
+    "fallbackFolders": [
+      "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"
+    ],
+    "originalTargetFrameworks": [
+      "netcoreapp2.2"
+    ],
+    "frameworks": {
+      "netcoreapp2.2": {
+        "projectReferences": {
+          "/Users/kkb/moje/studia/dotNet/projekt/MassReconApi/MassReconApi.Contract/MassReconApi.Contract.csproj": {
+            "projectPath": "/Users/kkb/moje/studia/dotNet/projekt/MassReconApi/MassReconApi.Contract/MassReconApi.Contract.csproj"
+          },
+          "/Users/kkb/moje/studia/dotNet/projekt/MassReconApi/MassReconApi.Infrastructure/MassReconApi.Infrastructure.csproj": {
+            "projectPath": "/Users/kkb/moje/studia/dotNet/projekt/MassReconApi/MassReconApi.Infrastructure/MassReconApi.Infrastructure.csproj"
+          }
+        }
+      }
+    },
+    "warningProperties": {
+      "warnAsError": [
+        "NU1605"
+      ]
+    }
+  },
+  "frameworks": {
+    "netcoreapp2.2": {
+      "dependencies": {
+        "Microsoft.AspNetCore.App": {
+          "suppressParent": "All",
+          "target": "Package",
+          "version": "[2.2.0, )",
+          "autoReferenced": true
+        },
+        "Microsoft.AspNetCore.Razor.Design": {
+          "suppressParent": "All",
+          "target": "Package",
+          "version": "[2.2.0, )"
+        },
+        "Microsoft.NETCore.App": {
+          "suppressParent": "All",
+          "target": "Package",
+          "version": "[2.2.0, )",
+          "autoReferenced": true
+        }
+      },
+      "imports": [
+        "net461"
+      ],
+      "assetTargetFallback": true,
+      "warn": true
+    }
+  }
+}

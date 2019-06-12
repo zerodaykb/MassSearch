@@ -1,0 +1,14 @@
+/Users/kkb/moje/studia/dotNet/projekt/MassReconApi/MassReconApi.Infrastructure/bin/Debug/netcoreapp2.2/MassReconApi.Infrastructure.deps.json
+/Users/kkb/moje/studia/dotNet/projekt/MassReconApi/MassReconApi.Infrastructure/bin/Debug/netcoreapp2.2/MassReconApi.Infrastructure.runtimeconfig.json
+/Users/kkb/moje/studia/dotNet/projekt/MassReconApi/MassReconApi.Infrastructure/bin/Debug/netcoreapp2.2/MassReconApi.Infrastructure.runtimeconfig.dev.json
+/Users/kkb/moje/studia/dotNet/projekt/MassReconApi/MassReconApi.Infrastructure/bin/Debug/netcoreapp2.2/MassReconApi.Infrastructure.dll
+/Users/kkb/moje/studia/dotNet/projekt/MassReconApi/MassReconApi.Infrastructure/bin/Debug/netcoreapp2.2/MassReconApi.Infrastructure.pdb
+/Users/kkb/moje/studia/dotNet/projekt/MassReconApi/MassReconApi.Infrastructure/obj/Debug/netcoreapp2.2/MassReconApi.Infrastructure.csprojAssemblyReference.cache
+/Users/kkb/moje/studia/dotNet/projekt/MassReconApi/MassReconApi.Infrastructure/obj/Debug/netcoreapp2.2/MassReconApi.Infrastructure.csproj.CoreCompileInputs.cache
+/Users/kkb/moje/studia/dotNet/projekt/MassReconApi/MassReconApi.Infrastructure/obj/Debug/netcoreapp2.2/MassReconApi.Infrastructure.RazorAssemblyInfo.cache
+/Users/kkb/moje/studia/dotNet/projekt/MassReconApi/MassReconApi.Infrastructure/obj/Debug/netcoreapp2.2/MassReconApi.Infrastructure.RazorAssemblyInfo.cs
+/Users/kkb/moje/studia/dotNet/projekt/MassReconApi/MassReconApi.Infrastructure/obj/Debug/netcoreapp2.2/MassReconApi.Infrastructure.AssemblyInfoInputs.cache
+/Users/kkb/moje/studia/dotNet/projekt/MassReconApi/MassReconApi.Infrastructure/obj/Debug/netcoreapp2.2/MassReconApi.Infrastructure.AssemblyInfo.cs
+/Users/kkb/moje/studia/dotNet/projekt/MassReconApi/MassReconApi.Infrastructure/obj/Debug/netcoreapp2.2/MassReconApi.Infrastructure.RazorTargetAssemblyInfo.cache
+/Users/kkb/moje/studia/dotNet/projekt/MassReconApi/MassReconApi.Infrastructure/obj/Debug/netcoreapp2.2/MassReconApi.Infrastructure.dll
+/Users/kkb/moje/studia/dotNet/projekt/MassReconApi/MassReconApi.Infrastructure/obj/Debug/netcoreapp2.2/MassReconApi.Infrastructure.pdb
