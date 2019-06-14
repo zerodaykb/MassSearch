@@ -2,7 +2,7 @@ namespace MassReconApi.Contract.Dto
 {
     public class ReportItemDto
     {
-        public long Id { get; set; }
+        public long? Id { get; set; }
         public string Content { get; set; } 
         public string Notes { get; set; }
         public string SourceType { get; set; }

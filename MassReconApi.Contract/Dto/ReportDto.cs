@@ -10,6 +10,6 @@ namespace MassReconApi.Contract.Dto
         public string Status { get; set; }
         public int Quantity { get; set; }
 
-        private List<ReportItemDto> ReportItems { get; set; }
+        public IEnumerable<ReportItemDto> ReportItems { get; set; }
     }
 }

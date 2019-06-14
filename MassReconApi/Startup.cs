@@ -33,19 +33,23 @@ namespace MassReconApi
             
             services.AddScoped<IReconNoteRepository, ReconNoteRepository>();
             services.AddScoped<IReportRepository, ReportRepository>();
-            
+            services.AddScoped<IReportItemRepository, ReportItemRepository>();
             services.AddScoped<IResponseExternalRepository, ResponseExternalRepository>();
-            //services.AddScoped<IresponseIte/, SingleResultRepository>();
             
             services.AddScoped<IReconNoteService, ReconNoteService>();
             services.AddScoped<IReportService, ReportService>();
             services.AddScoped<IResponseService, ResponseService>();
-            //services.AddScoped<ISingleResultService, SingleResultService>();
+            services.AddScoped<IReportItemService, ReportItemService>();
             
             services.AddDbContext<MassReconContext>(options => 
                 options.UseSqlite("DataSource=dbo.MassReconApi.db",
                     builder => builder.MigrationsAssembly("MassReconApi.Infrastructure")    
                 ));
+
+            services.AddCors(options =>
+            {
+                options.AddPolicy("cors", builder => builder.AllowAnyOrigin().AllowAnyHeader());
+            });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -63,6 +67,7 @@ namespace MassReconApi
 
             app.UseHttpsRedirection();
             app.UseMvc();
+            app.UseCors("cors");
         }
     }
 }

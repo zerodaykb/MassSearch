@@ -6,7 +6,7 @@ namespace MassReconApi.Infrastucture.Context
     public class MassReconContext : DbContext
     {
         public DbSet<Report> Report { get; set; }
-        public DbSet<ReportItem> SingleResult { get; set; }
+        public DbSet<ReportItem> ReportItem { get; set; }
         public DbSet<ReconNote> ReconNote { get; set; }
         
         public MassReconContext(DbContextOptions options) : base(options)

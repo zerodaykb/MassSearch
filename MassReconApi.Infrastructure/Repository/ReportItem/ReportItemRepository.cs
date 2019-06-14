@@ -19,7 +19,7 @@ namespace MassReconApi.Infrastucture.Repository
         
         public async Task<IEnumerable<ReportItem>> GetAll()
         {
-            var results = await _massReconContext.SingleResult.ToListAsync();
+            var results = await _massReconContext.ReportItem.ToListAsync();
             results.ForEach(x =>
             {
                 _massReconContext.Entry(x).Reference(y => y.Report).LoadAsync();
@@ -30,7 +30,7 @@ namespace MassReconApi.Infrastucture.Repository
 
         public async Task<ReportItem> GetById(long id)
         {
-            var result = await _massReconContext.SingleResult
+            var result = await _massReconContext.ReportItem
                 .Where(x => x.Id == id)
                 .SingleOrDefaultAsync();
 
@@ -41,16 +41,16 @@ namespace MassReconApi.Infrastucture.Repository
         public async Task Add(ReportItem result)
         {
             result.DateOfCreation = DateTime.Now;
-            await _massReconContext.SingleResult
+            await _massReconContext.ReportItem
                 .Include(x => x.Report)
                 .FirstAsync();
-            await _massReconContext.SingleResult.AddAsync(result);
+            await _massReconContext.ReportItem.AddAsync(result);
             await _massReconContext.SaveChangesAsync();
         }
 
         public async Task Update(ReportItem result)
         {
-            var resultToUpdate = await _massReconContext.SingleResult
+            var resultToUpdate = await _massReconContext.ReportItem
                 .Include(x => x.Report)
                 .SingleOrDefaultAsync(x => x.Id == result.Id);
 
@@ -74,10 +74,10 @@ namespace MassReconApi.Infrastucture.Repository
 
         public async Task Delete(long id)
         {
-            var resultToDelete = await _massReconContext.SingleResult.SingleOrDefaultAsync(result => result.Id == id);
+            var resultToDelete = await _massReconContext.ReportItem.SingleOrDefaultAsync(result => result.Id == id);
             if (resultToDelete != null)
             {
-                _massReconContext.SingleResult.Remove(resultToDelete);
+                _massReconContext.ReportItem.Remove(resultToDelete);
                 await _massReconContext.SaveChangesAsync();
             }
         }

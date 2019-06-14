@@ -2,11 +2,13 @@ using System;
 using System.Threading.Tasks;
 using MassReconApi.Contract.Dto;
 using MassReconApi.Core.Services;
+using Microsoft.AspNetCore.Cors;
 using Microsoft.AspNetCore.Mvc;
 
 namespace MassReconApi.Controllers
 {   
     [ApiController]
+    [EnableCors("cors")]
     [Route("api/[controller]")]
     public class ReportsController : ControllerBase
     {
@@ -63,7 +65,7 @@ namespace MassReconApi.Controllers
         }
 
         [HttpDelete("{Id}")]
-        public async Task<IActionResult> DeleteFlat(long id)
+        public async Task<IActionResult> DeleteReport(long id)
         {
             await _iReportsService.Delete(id);
             return Ok($"Report with id = {id} deleted");

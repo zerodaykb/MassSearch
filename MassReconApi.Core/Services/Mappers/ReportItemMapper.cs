@@ -24,7 +24,7 @@ namespace MassReconApi.Core.Services.Mappers
         {
             return new ReportItem()
             {
-                Id = reportItemDto.Id,
+                Id = reportItemDto.Id.GetValueOrDefault(),
                 Content = reportItemDto.Content,
                 Notes = reportItemDto.Notes,
                 SourceType = reportItemDto.SourceType,

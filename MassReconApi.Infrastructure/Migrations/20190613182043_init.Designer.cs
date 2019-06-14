@@ -9,7 +9,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace MassReconApi.Infrastucture.Migrations
 {
     [DbContext(typeof(MassReconContext))]
-    [Migration("20190608191734_init")]
+    [Migration("20190613182043_init")]
     partial class init
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -17,6 +17,22 @@ namespace MassReconApi.Infrastucture.Migrations
 #pragma warning disable 612, 618
             modelBuilder
                 .HasAnnotation("ProductVersion", "2.2.2-servicing-10034");
+
+            modelBuilder.Entity("MassReconApi.Infrastucture.Model.ReconNote", b =>
+                {
+                    b.Property<long>("Id")
+                        .ValueGeneratedOnAdd();
+
+                    b.Property<DateTime>("DateOfCreation");
+
+                    b.Property<DateTime>("DateOfUpdate");
+
+                    b.Property<string>("Text");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("ReconNote");
+                });
 
             modelBuilder.Entity("MassReconApi.Infrastucture.Model.Report", b =>
                 {
@@ -29,6 +45,8 @@ namespace MassReconApi.Infrastucture.Migrations
 
                     b.Property<string>("Notes");
 
+                    b.Property<int>("Quantity");
+
                     b.Property<string>("SearchPhrase");
 
                     b.Property<string>("Status");
@@ -38,7 +56,7 @@ namespace MassReconApi.Infrastucture.Migrations
                     b.ToTable("Report");
                 });
 
-            modelBuilder.Entity("MassReconApi.Infrastucture.Model.SingleResult", b =>
+            modelBuilder.Entity("MassReconApi.Infrastucture.Model.ReportItem", b =>
                 {
                     b.Property<long>("Id")
                         .ValueGeneratedOnAdd();
@@ -48,6 +66,8 @@ namespace MassReconApi.Infrastucture.Migrations
                     b.Property<DateTime>("DateOfCreation");
 
                     b.Property<DateTime>("DateOfUpdate");
+
+                    b.Property<string>("Ip");
 
                     b.Property<bool>("IsChecked");
 
@@ -61,13 +81,13 @@ namespace MassReconApi.Infrastucture.Migrations
 
                     b.HasIndex("ReportId");
 
-                    b.ToTable("SingleResult");
+                    b.ToTable("ReportItem");
                 });
 
-            modelBuilder.Entity("MassReconApi.Infrastucture.Model.SingleResult", b =>
+            modelBuilder.Entity("MassReconApi.Infrastucture.Model.ReportItem", b =>
                 {
                     b.HasOne("MassReconApi.Infrastucture.Model.Report", "Report")
-                        .WithMany("SingleResults")
+                        .WithMany("ReportItems")
                         .HasForeignKey("ReportId")
                         .OnDelete(DeleteBehavior.Cascade);
                 });

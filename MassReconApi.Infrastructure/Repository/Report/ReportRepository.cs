@@ -43,7 +43,7 @@ namespace MassReconApi.Infrastucture.Repository
             report.DateOfCreation = DateTime.Now;
             await _massReconContext.Report
                 .Include(x => x.ReportItems)
-                .FirstAsync();
+                .FirstOrDefaultAsync();
             await _massReconContext.Report.AddAsync(report);
             await _massReconContext.SaveChangesAsync();
         }
