@@ -1,0 +1,8 @@
+<div class="card w-50">
+  <h5 class="card-header">{{ searchResponseItem.ip }}</h5>
+  <div class="card-body">
+    <p class="card-text">{{searchResponseItem.content}}</p>
+    <h5 class="card-text">{{ searchResponseItem.source }}</h5>
+    <a href="https://www.shodan.io/host/{{ searchResponseItem.ip }}" class="btn btn-primary" target="_blank">Sprawdź</a>
+  </div>
+</div>

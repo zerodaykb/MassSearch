@@ -1,0 +1,32 @@
+<div class="p-3 container">
+  <div class="row">
+    <div class="col-md-4">
+      <form class="form-horizontal" role="form" [formGroup]="searchForm" (ngSubmit)="searchAction()">
+
+        <div class="form-group form-inline">
+          <input class="form-control mr-sm-2" type="text" formControlName="query" aria-label="Szukaj">
+          <button class="btn btn-outline-warning btn-rounded" type="submit" [disabled]="!searchForm.valid">
+            Szukaj
+          </button>
+        </div>
+
+        <div formGroupName="scannersGroup">
+
+          <div class="form-group">
+            <div class="form-inline">
+              <input type="checkbox" id="shodan" name="shodan" formControlName="shodan">
+              <label for="shodan" class="col-md-3 control-label">Shodan</label>
+            </div>
+
+            <div class="form-inline">
+              <input type="checkbox" id="censys" name="censys" formControlName="censys">
+              <label for="censys" class="col-md-3 control-label">Censys</label>
+            </div>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+  <app-scan-response [searchResponse]="searchResponse"></app-scan-response>
+</div>
+
