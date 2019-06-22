@@ -1,3 +1,9 @@
-<p>
-  reports works!
-</p>
+<div class="m-3 container">
+  <div *ngIf="reports">
+    <div id="accordion" class="pt-5">
+      <div *ngFor="let report of reports">
+        <app-report [report]="report"></app-report>
+      </div>
+    </div>
+  </div>
+</div>

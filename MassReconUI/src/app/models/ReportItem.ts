@@ -4,4 +4,5 @@ export interface ReportItem {
   source: string;
   ip: string;
   isChecked: boolean;
+  id: number;
 }

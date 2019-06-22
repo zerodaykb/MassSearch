@@ -10,13 +10,11 @@ namespace MassReconApi.Infrastucture.Model
     }
     
     
-    public class ResponseItem
+    public class ShodanResponseItem
     {
         public string Data { get; set; }
         public string Ip_str { get; set; }
         public string Org { get; set; }
-       // public IEnumerable<string> Hostnames { get; set; }
-        public Location Location { get; set; }
 
     }
 }

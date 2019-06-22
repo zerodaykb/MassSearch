@@ -6,10 +6,11 @@ namespace MassReconApi.Contract.Dto
     {
         public long? Id { get; set; }
         public string SearchPhrase { get; set; }
+        public string Title { get; set; }
         public string Notes { get; set; }
         public string Status { get; set; }
         public int Quantity { get; set; }
 
-        public IEnumerable<ReportItemDto> ReportItems { get; set; }
+        public List<ReportItemDto> ReportItems { get; set; }
     }
 }

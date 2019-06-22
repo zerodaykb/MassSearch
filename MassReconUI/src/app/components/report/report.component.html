@@ -1,0 +1,37 @@
+<div class="card">
+  <div class="text-light card-header"
+       [ngClass]="{
+       'bg-info': report.status === 'nowy',
+       'bg-warning': report.status === 'rozpoczety',
+       'bg-success': report.status === 'koniec'
+       }" id="heading_{{report.id}}">
+    <div class="card-title">
+      <h5 class="">
+        <button class="btn btn-link collapsed" data-toggle="collapse" [attr.data-target]="'#collapse_' + report.id"
+                aria-expanded="true"
+                [attr.aria-controls]="'collapse_' + report.id">
+          {{ report.title }}
+        </button>
+      </h5>
+    </div>
+    <div class="card-subtitle">
+      Fraza: {{ report.searchPhrase }}
+    </div>
+  </div>
+  <div [id]="'collapse_' + report.id" class="collapse" [attr.aria-labelledby]="'heading_' + report.id"
+       data-parent="#accordion">
+    <div class="card-body">
+      <button class="btn btn-outline-success btn-rounded" (click)="changeStatus()">Zmień stan</button>
+      <mat-icon svgIcon="thumbs-up" aria-hidden="false" aria-label="Example thumbs up SVG icon"></mat-icon>
+      <div class="form-group shadow-sm">
+        <!--<label for="exampleFormControlTextarea6">Notatki:</label>-->
+        <textarea (change)="updateReport()" [(ngModel)]="report.notes" class="form-control z-depth-1" rows="3">{{report.notes}}</textarea>
+      </div>
+      <p class="card-text bold"><b>Ilośc wyników: </b>{{report.quantity}}</p>
+      <a routerLink="/reports/{{report.id}}">
+        <button class="btn btn-outline-info btn-rounded">Zobacz raport</button>
+      </a>
+      <mat-icon svgIcon="thumbs-up" aria-hidden="false" aria-label="Example thumbs up SVG icon"></mat-icon>
+    </div>
+  </div>
+</div>

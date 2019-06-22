@@ -12,7 +12,7 @@ namespace MassReconApi.Controllers
     [Route("api/[controller]")]
     public class ReportsController : ControllerBase
     {
-        private readonly IReportService _iReportsService;
+        private readonly IReportService _iReportsService;    
 
         public ReportsController(IReportService iReportsService)
         {
@@ -26,7 +26,7 @@ namespace MassReconApi.Controllers
             return Ok(reports);
         }
         
-        [HttpGet("{Id}")]
+        [HttpGet("{id}")]
         public async Task<IActionResult> GetReportById(long id)
         {
             try
@@ -64,7 +64,7 @@ namespace MassReconApi.Controllers
             return Ok($"Updated report with id = {reportDto.Id}");
         }
 
-        [HttpDelete("{Id}")]
+        [HttpDelete("{id}")]
         public async Task<IActionResult> DeleteReport(long id)
         {
             await _iReportsService.Delete(id);

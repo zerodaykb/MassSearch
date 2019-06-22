@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using System.Linq;
+using System.Net;
 using System.Threading.Tasks;
 using MassReconApi.Contract.Dto;
 using MassReconApi.Core.Services.Mappers;
@@ -10,18 +11,30 @@ namespace MassReconApi.Core.Services
 {
     public class ResponseService : IResponseService
     {
-        private readonly IResponseExternalRepository _iResponseExternalRepository;
+        private readonly IResponseShodanRepository _iResponseShodanRepository;
+        private readonly IResponseCensysRepository _iResponseCensysRepository;
 
-        public ResponseService(IResponseExternalRepository iResponseExternalRepository)
+        public ResponseService(IResponseShodanRepository iResponseShodanRepository, IResponseCensysRepository iResponseCensysRepository)
         {
-            _iResponseExternalRepository = iResponseExternalRepository;
+            _iResponseShodanRepository = iResponseShodanRepository;
+            _iResponseCensysRepository = iResponseCensysRepository;
         }
         
-        public async Task<ResponseDto> GetByPhrase(string phrase)
+        public async Task<ResponseDto> GetByPhrase(string phrase, string type)
         {
-            var result = await _iResponseExternalRepository.GetByPhrase(phrase);
-            
-            return ResponseMapper.MapResponseToDto(result, phrase);
+            switch (type)
+            {
+                case "shodan":
+                    var shodanResult = await _iResponseShodanRepository.GetByPhrase(phrase);
+                    return ResponseMapper.MapShodanResponseToDto(shodanResult, phrase);
+                
+                case "censys":
+                    var censysResult = await _iResponseCensysRepository.GetByPhrase(phrase);
+                    return ResponseMapper.MapCensysResponseToDto(censysResult);
+                
+                default:
+                    return null;
+            } 
         }
     }
 }

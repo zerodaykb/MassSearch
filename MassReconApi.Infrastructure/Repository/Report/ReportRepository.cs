@@ -71,7 +71,7 @@ namespace MassReconApi.Infrastucture.Repository
                         {
                             if (result.Id == entityResult.Id)
                             {
-                                _massReconContext.Entry(resultsToUpdate).CurrentValues.SetValues(report.ReportItems);
+                                _massReconContext.Entry(result).CurrentValues.SetValues(entityResult);
                             }
                         }
                     }

@@ -37,7 +37,8 @@ namespace MassReconApi.Infrastucture.Model
     {
         
         public string SearchPhrase { get; set; }
-        public IEnumerable<ReportItem> ReportItems { get; set; }
+        public string Title { get; set; }
+        public List<ReportItem> ReportItems { get; set; }
         public string Notes { get; set; }
         public string Status { get; set; }
         public int Quantity { get; set; }

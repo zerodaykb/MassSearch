@@ -4,6 +4,7 @@ import {Report} from '../../models/Report';
 import {SearchService} from '../../services/search/search.service';
 import {ReportsService} from '../../services/reports/reports.service';
 import {ReadPropExpr} from '@angular/compiler';
+import {FormBuilder, Validators} from '@angular/forms';
 
 @Component({
   selector: 'app-scan-response',
@@ -13,13 +14,17 @@ import {ReadPropExpr} from '@angular/compiler';
 })
 export class ScanResponseComponent implements OnInit {
 
-  constructor(private reportsService: ReportsService) { }
+  constructor(private formBuilder: FormBuilder, private reportsService: ReportsService) { }
 
   @Input()
   searchResponse: SearchResponse;
 
+  public insertReportForm = this.formBuilder.group({
+    reportTitle: ['', [ Validators.required, Validators.minLength(3) ]],
+    reportNotes: ['']
+  });
+
   report: Report;
-  reports: Report[];
 
   ngOnInit() {
   }
@@ -30,7 +35,8 @@ export class ScanResponseComponent implements OnInit {
       quantity: this.searchResponse.quantity,
       reportItems: this.searchResponse.items,
       status: 'nowy',
-      notes: '',
+      notes: this.insertReportForm.get('reportNotes').value,
+      title: this.insertReportForm.get('reportTitle').value,
     };
 
     console.log(this.report);

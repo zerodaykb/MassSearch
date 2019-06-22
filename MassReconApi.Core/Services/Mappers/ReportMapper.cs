@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.Linq;
 using MassReconApi.Contract.Dto;
 using MassReconApi.Infrastucture.Model;
 
@@ -19,6 +20,7 @@ namespace MassReconApi.Core.Services.Mappers
             {
                 Id = report.Id,
                 SearchPhrase = report.SearchPhrase,
+                Title = report.Title,
                 Notes = report.Notes,
                 Status = report.Status,
                 Quantity = report.Quantity,
@@ -39,11 +41,11 @@ namespace MassReconApi.Core.Services.Mappers
             }
             
             
-            
             return new Report()
             {
                 Id = reportDto.Id.GetValueOrDefault(),
                 SearchPhrase = reportDto.SearchPhrase,
+                Title = reportDto.Title,
                 Notes = reportDto.Notes,
                 Status = reportDto.Status,
                 Quantity = reportDto.Quantity,

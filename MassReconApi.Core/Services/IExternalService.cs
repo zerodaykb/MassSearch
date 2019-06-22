@@ -6,6 +6,6 @@ namespace MassReconApi.Core.Services
 {
     public interface IExternalService<TEntity>
     {    
-        Task<TEntity> GetByPhrase(string phrase);
+        Task<TEntity> GetByPhrase(string phrase, string type);
     }
 }

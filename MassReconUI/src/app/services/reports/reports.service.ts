@@ -4,6 +4,7 @@ import {Observable, throwError} from 'rxjs';
 import {SearchResponse} from '../../models/SearchResponse';
 import {Report} from '../../models/Report';
 import {catchError} from 'rxjs/operators';
+import {ReportItem} from '../../models/ReportItem';
 
 const httpOptions = {
   headers: new HttpHeaders({
@@ -14,11 +15,40 @@ const httpOptions = {
 @Injectable()
 export class ReportsService {
   reportsUrl = 'https://localhost:5001/api/reports';
+  reportItemsUrl = 'https://localhost:5001/api/reportItems';
 
   constructor(private httpClient: HttpClient) { }
 
   postReport(report: Report): Observable<Report> {
     return this.httpClient.post<Report>(this.reportsUrl, report, httpOptions)
+      .pipe(
+        catchError(this.handleError)
+      );
+  }
+
+  putReport(report: Report): Observable<Report> {
+    return this.httpClient.put<Report>(this.reportsUrl, report, httpOptions)
+      .pipe(
+        catchError(this.handleError)
+      );
+  }
+
+  getReports(): Observable<Report[]> {
+    return this.httpClient.get<Report[]>(this.reportsUrl, httpOptions)
+      .pipe(
+        catchError(this.handleError)
+      );
+  }
+
+  getReport(id: number): Observable<Report> {
+    return this.httpClient.get<Report>(this.reportsUrl + `/${id}`, httpOptions)
+      .pipe(
+        catchError(this.handleError)
+      );
+  }
+
+  putReportItem(report: ReportItem): Observable<ReportItem> {
+    return this.httpClient.put<ReportItem>(this.reportItemsUrl, report, httpOptions)
       .pipe(
         catchError(this.handleError)
       );

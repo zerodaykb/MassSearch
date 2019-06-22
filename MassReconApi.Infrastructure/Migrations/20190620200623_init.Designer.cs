@@ -9,7 +9,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace MassReconApi.Infrastucture.Migrations
 {
     [DbContext(typeof(MassReconContext))]
-    [Migration("20190613182043_init")]
+    [Migration("20190620200623_init")]
     partial class init
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -50,6 +50,8 @@ namespace MassReconApi.Infrastucture.Migrations
                     b.Property<string>("SearchPhrase");
 
                     b.Property<string>("Status");
+
+                    b.Property<string>("Title");
 
                     b.HasKey("Id");
 

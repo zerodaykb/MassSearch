@@ -1,0 +1,10 @@
+<div class="card mt-1">
+  <h5 class="card-header">{{ reportItem.ip }}</h5>
+  <div class="card-body">
+    <p class="card-text">{{ reportItem.content }}</p>
+    <p class="card-text">{{ reportItem.source }}</p>
+    <div class="form-group shadow-sm">
+      <textarea (change)="updateReportItem()" class="form-control z-depth-1" rows="3" [(ngModel)]="reportItem.notes">{{reportItem.notes}}</textarea>
+    </div>
+  </div>
+</div>

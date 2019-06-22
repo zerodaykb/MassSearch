@@ -10,7 +10,7 @@ const search = 'https://localhost:5001/api/search?query=';
 export class SearchService {
   constructor(private httpClient: HttpClient) { }
 
-  getSearchResponse(query: string): Observable<SearchResponse>  {
-    return this.httpClient.get<SearchResponse>(search + query);
+  getSearchResponse(query: string, type: string): Observable<SearchResponse>  {
+    return this.httpClient.get<SearchResponse>(search + query + '&type=' + type);
   }
 }

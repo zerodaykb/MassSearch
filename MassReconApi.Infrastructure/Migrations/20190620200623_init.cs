@@ -31,6 +31,7 @@ namespace MassReconApi.Infrastucture.Migrations
                     DateOfCreation = table.Column<DateTime>(nullable: false),
                     DateOfUpdate = table.Column<DateTime>(nullable: false),
                     SearchPhrase = table.Column<string>(nullable: true),
+                    Title = table.Column<string>(nullable: true),
                     Notes = table.Column<string>(nullable: true),
                     Status = table.Column<string>(nullable: true),
                     Quantity = table.Column<int>(nullable: false)

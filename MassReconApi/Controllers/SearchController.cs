@@ -19,13 +19,15 @@ namespace MassReconApi.Controllers
             _iResponseService = iResponseService;
         } 
         
-        [HttpGet()]
-        public async Task<IActionResult> GetByPhrase([FromQuery(Name = "query")] string phrase)
+        [HttpGet]
+        public async Task<IActionResult> GetByPhrase(
+            [FromQuery(Name = "query")] string phrase,
+            [FromQuery(Name = "type")] string type
+            )
         {
-            var results = await _iResponseService.GetByPhrase(phrase);
+            var results = await _iResponseService.GetByPhrase(phrase, type);
             
             return Ok(results);
         }
-        
     }
 }

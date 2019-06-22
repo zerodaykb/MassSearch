@@ -45,8 +45,22 @@ export class SearchComponent implements OnInit {
 
   searchAction() {
     const queryValue = this.searchForm.get('query').value;
+    let type = null;
 
-    this.searchService.getSearchResponse(queryValue)
+    // alert(this.searchForm.get('scannersGroup.shodan').value);
+    // alert(this.searchForm.get('scannersGroup.censys').value);
+
+    if (this.searchForm.get('scannersGroup.shodan').value) {
+      type = 'shodan';
+    } else if (this.searchForm.get('scannersGroup.censys').value) {
+      type = 'censys';
+    } else {
+      alert('Błąd');
+      return;
+    }
+
+
+    this.searchService.getSearchResponse(queryValue, type)
       .subscribe((response: SearchResponse) => this.searchResponse = response);
   }
 

@@ -1,0 +1,26 @@
+<div class="card" *ngIf="report">
+  <div class="text-light card-header"
+       [ngClass]="{
+       'bg-info': report.status === 'nowy',
+       'bg-warning': report.status === 'rozpoczety',
+       'bg-success': report.status === 'koniec'
+       }">
+    <div class="card-title">
+      <h5>{{ report.title }}</h5>
+    </div>
+    <div class="card-subtitle">
+      Fraza: {{ report.searchPhrase }}
+    </div>
+  </div>
+    <div class="card-body">
+      <div class="form-group shadow-sm">
+        <!--<label for="exampleFormControlTextarea6">Notatki:</label>-->
+        <textarea class="form-control z-depth-1" rows="3" >{{report.notes}}</textarea>
+      </div>
+      <p class="card-text bold"><b>Ilośc wyników: </b>{{report.quantity}}</p>
+      <mat-icon svgIcon="thumbs-up" aria-hidden="false" aria-label="Example thumbs up SVG icon"></mat-icon>
+      <div *ngFor="let reportItem of report.reportItems">
+        <app-report-item [reportItem]="reportItem"></app-report-item>
+      </div>
+    </div>
+</div>

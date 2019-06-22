@@ -49,6 +49,8 @@ namespace MassReconApi.Infrastucture.Migrations
 
                     b.Property<string>("Status");
 
+                    b.Property<string>("Title");
+
                     b.HasKey("Id");
 
                     b.ToTable("Report");

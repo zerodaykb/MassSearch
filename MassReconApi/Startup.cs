@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net.Http.Headers;
 using System.Threading.Tasks;
 using MassReconApi.Core.Services;
 using MassReconApi.Infrastucture.Context;
@@ -14,6 +15,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
+using Swashbuckle.AspNetCore.Swagger;
 
 namespace MassReconApi
 {
@@ -34,7 +36,8 @@ namespace MassReconApi
             services.AddScoped<IReconNoteRepository, ReconNoteRepository>();
             services.AddScoped<IReportRepository, ReportRepository>();
             services.AddScoped<IReportItemRepository, ReportItemRepository>();
-            services.AddScoped<IResponseExternalRepository, ResponseExternalRepository>();
+            services.AddScoped<IResponseShodanRepository, ResponseShodanRepository>();
+            services.AddScoped<IResponseCensysRepository, ResponseCensysRepository>();
             
             services.AddScoped<IReconNoteService, ReconNoteService>();
             services.AddScoped<IReportService, ReportService>();
@@ -48,8 +51,29 @@ namespace MassReconApi
 
             services.AddCors(options =>
             {
-                options.AddPolicy("cors", builder => builder.AllowAnyOrigin().AllowAnyHeader());
+                options.AddPolicy("cors", builder => 
+                    builder
+                        .AllowAnyOrigin()
+                        .AllowAnyMethod()
+                        .AllowAnyHeader()
+                    );
             });
+            
+            services.AddHttpClient("shodan", client =>
+            {
+                client.BaseAddress = new Uri("https://api.shodan.io/shodan/host/search");
+            });
+            
+            services.AddHttpClient("censys", client =>
+            {
+                client.BaseAddress = new Uri("https://censys.io/api/v1/search/ipv4");
+                client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue(
+                    "Basic",
+                    Environment.GetEnvironmentVariable("CENSYS_AUTH_KEY")
+                );
+            });
+
+            services.AddSwaggerGen(c => { c.SwaggerDoc("v1", new Info {Title = "FlatApi", Version = "v1"}); });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -68,6 +92,13 @@ namespace MassReconApi
             app.UseHttpsRedirection();
             app.UseMvc();
             app.UseCors("cors");
+
+            app.UseSwagger();
+            app.UseSwaggerUI(c =>
+            {
+                c.SwaggerEndpoint("/swagger/v1/swagger.json",
+                    c.RoutePrefix = string.Empty);
+            });
         }
     }
 }
