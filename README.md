@@ -1,5 +1,5 @@
 # .net + angular project
 
-A project to integrate Shodan and Censys into one searching interface and storing results in local database.
+A project to integrate Shodan and Censys APIs into one searching interface and store results in local database.
 
 With Angular GUI.
