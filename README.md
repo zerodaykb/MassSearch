@@ -1,1 +1,1 @@
-# dot-angular-projekt
+# .net + angular project
